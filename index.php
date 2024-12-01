@@ -121,7 +121,7 @@ class Tank extends Vehicle
     }
 }
 
-// Функция для обработки машин
+// Полиморфная функция для управления машинами
 function operateVehicle(Vehicle $vehicle): void
 {
     $vehicle->moveForward();
@@ -140,7 +140,7 @@ function operateVehicle(Vehicle $vehicle): void
     if ($vehicle instanceof HasInterior) {
         $vehicle->showInterior();
     } else {
-        echo "{$vehicle->getName()} не имеет салона.\n";
+        echo "{$vehicle->getName()} не может иметь отделку салона.\n";
     }
 }
 
